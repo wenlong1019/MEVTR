@@ -199,8 +199,8 @@ if __name__ == "__main__":
         textual_encoder = "xlm-roberta-base"
         SETUP = "{}+{}".format(visual_encoder, textual_encoder)
         ###############################################################################
-        visual_model_path = "model/{}".format(visual_encoder)
-        textual_model_path = "model/{}".format(textual_encoder)
+        visual_model_path = "../model/{}".format(visual_encoder)
+        textual_model_path = "../model/{}".format(textual_encoder)
         TRAIN = "../datasets/{}/train.txt".format(DATASET)
         DEV = "../datasets/{}/dev.txt".format(DATASET)
         TEST = "../datasets/{}/test.txt".format(DATASET)
