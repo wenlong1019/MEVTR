@@ -214,8 +214,8 @@ if __name__ == "__main__":
         textual_encoder = "xlm-roberta-base"
         SETUP = "{}+{}".format(visual_encoder, textual_encoder)
         ###############################################################################
-        visual_model_path = "model/{}".format(visual_encoder)
-        textual_model_path = "model/{}".format(textual_encoder)
+        visual_model_path = "../model/{}".format(visual_encoder)
+        textual_model_path = "../model/{}".format(textual_encoder)
         TRAIN = "../datasets/ud-treebanks/{}/train.conllu".format(DATASET)
         DEV = "../datasets/ud-treebanks/{}/dev.conllu".format(DATASET)
         TEST = "../datasets/ud-treebanks/{}/test.conllu".format(DATASET)
