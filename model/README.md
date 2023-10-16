@@ -1,4 +1,4 @@
-## About The Model Folder
+## About “model” Folder
 
 You can create a model folder in that directory. Then put the weights file into the corresponding folder.
 
