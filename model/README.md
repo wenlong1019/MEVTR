@@ -28,4 +28,5 @@ You can create a model folder in that directory. Then put the weights file into 
 |   └── pytorch_model.bin
 |   ├── sentencepiece.bpe.model
 |   └── tokenizer.json
+├── ···
 ```
