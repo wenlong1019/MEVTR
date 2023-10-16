@@ -14,7 +14,7 @@ You need to configure the appropriate datasets, models and training environments
 python src/train_ner.py
 ```
 
-###### POS TASK
+###### POS TASK
 
 ```
 python src/train_pos.py
