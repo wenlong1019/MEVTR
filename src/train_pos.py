@@ -237,16 +237,16 @@ if __name__ == "__main__":
             if os.path.exists(DIR):
                 shutil.rmtree(DIR)
             os.makedirs(DIR)
-            LOGFILE = "../logs/{}/{}/train_pixel_log.txt".format(DATASET, SETUP)
+            LOGFILE = "../logs/{}/{}/train_log.txt".format(DATASET, SETUP)
         else:
-            LOGFILE = "../logs/{}/{}/test_pixel_log.txt".format(DATASET, SETUP)
+            LOGFILE = "../logs/{}/{}/test_log.txt".format(DATASET, SETUP)
         ###############################################################
         if not os.path.exists(LOG_DIR):
             os.makedirs(LOG_DIR)
         if os.path.exists(LOGFILE):
             i = 0
             while os.path.exists(LOGFILE):
-                LOGFILE = "../logs/{}/{}/train_pixel_log_{}.txt".format(DATASET, SETUP, i)
+                LOGFILE = "../logs/{}/{}/train_log_{}.txt".format(DATASET, SETUP, i)
                 i = i + 1
         sys.stdout.update(LOGFILE)
         ###############################################################################
