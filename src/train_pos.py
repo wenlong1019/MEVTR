@@ -115,7 +115,6 @@ def get_args(forced_args=None):
     parser.add_argument("--load", help="Load trained model", metavar="FILE")
     parser.add_argument("--dir", type=str, default="../experiments/try")
     parser.add_argument("--data_dir",
-                        help="Directory to a Universal Dependencies data folder.",
                         type=str,
                         default=None
                         )
@@ -146,11 +145,6 @@ def get_args(forced_args=None):
                         help="Dropout to label output (before attention)",
                         type=float,
                         default=0.3
-                        )
-    parser.add_argument("--attention",
-                        type=str,
-                        choices=["biaffine", "bilinear", "affine"],
-                        default="bilinear"
                         )
 
     args = parser.parse_args(forced_args)
