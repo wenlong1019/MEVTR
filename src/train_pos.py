@@ -27,6 +27,25 @@ target_label = {
     "X": 16,
 }
 
+target_label_switch = {
+    0: "ADJ",
+    1: "ADP",
+    2: "ADV",
+    3: "AUX",
+    4: "CCONJ",
+    5: "DET",
+    6: "INTJ",
+    7: "NOUN",
+    8: "NUM",
+    9: "PART",
+    10: "PRON",
+    11: "PROPN",
+    12: "PUNCT",
+    13: "SCONJ",
+    14: "SYM",
+    15: "VERB",
+    16: "X",
+}
 
 class Logger(object):
     def __init__(self, filename="../logs/log.txt", stream=sys.stdout):
@@ -175,7 +194,7 @@ def run_parser(args):
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args.device = device
-
+    args.target_label_switch = target_label_switch
     args.target_label = target_label
     if not args.dir.endswith("/"):
         args.dir += "/"
