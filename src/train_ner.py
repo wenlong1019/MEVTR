@@ -20,6 +20,17 @@ target_label = {
     'I-MISC': 0
 }
 
+target_label_switch = {
+    0: "O",
+    1: "B-PER",
+    2: "I-PER",
+    3: "B-ORG",
+    4: "I-ORG",
+    5: "B-LOC",
+    6: "I-LOC",
+}
+
+
 
 class Logger(object):
     def __init__(self, filename="../logs/log.txt", stream=sys.stdout):
@@ -160,7 +171,7 @@ def run_parser(args):
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args.device = device
-
+    args.target_label_switch = target_label_switch
     args.target_label = target_label
     if not args.dir.endswith("/"):
         args.dir += "/"
