@@ -83,7 +83,7 @@ class MEVTR(nn.Module):
     def __init__(self, settings):
         super().__init__()
         self.settings = settings
-        self.n_labels = len(settings.target_label)
+        self.n_labels = len(settings.target_label_switch)
         # visual_encoder
         self.visual_config = PIXELConfig.from_pretrained(settings.visual_model_name_or_path)
         self.visual_encoder = PIXELModel.from_pretrained(settings.visual_model_name_or_path, config=self.visual_config)
